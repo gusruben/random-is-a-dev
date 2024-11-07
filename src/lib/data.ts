@@ -4,8 +4,12 @@ const MIN_FETCH_INTERVAL = 1000 * 60 * 60 * 24; // 1 day
 interface domain {
     domain: string,
     subdomain: string,
-    owner: { username: string },
-    record: { URL: string },
+    owner: { username: string, email: string },
+    record: {
+        URL: string | undefined,
+        A: string | undefined,
+        TXT: string | undefined, 
+    },
 }
 export let domainList: domain[] = [];
 
@@ -16,5 +20,6 @@ export async function refetchList() {
     lastFetch = current;
     
     const res = await fetch("https://raw-api.is-a.dev/");
-    domainList = await res.json();
+    // filter out domains that just have TXT Records
+    domainList = (await res.json() as domain[]).filter(domain => !domain.record.TXT);
 }
