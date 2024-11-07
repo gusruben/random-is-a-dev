@@ -10,7 +10,10 @@ export default {
 				mono: 'Space Mono',
 			},
 			colors: {
-				primary: '#3535FF',
+				primary: {
+					500: '#3535FF',
+					600: '#4949ff',
+				},
 				background: {
 					100: '#18181B',
 					200: '#2C2C3B',

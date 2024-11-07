@@ -15,8 +15,8 @@
 	class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2
             flex-col items-center gap-10 text-background-300"
 >
-	<p class="mx-0 whitespace-nowrap text-9xl"><span class="text-primary">random</span>.is-a.dev</p>
-	<a href="/go" class="bg-primary px-4 py-3 font-mono text-3xl text-white"
+	<p class="mx-0 whitespace-nowrap text-9xl"><span class="text-primary-500">random</span>.is-a.dev</p>
+	<a href="/go" class="bg-primary-500 px-4 py-3 font-mono text-3xl text-white hover:bg-primary-600"
 		>Explore a random developer's site</a
 	>
 </div>
@@ -27,7 +27,7 @@
 	Built with
 	<span class={'die' + (rolling ? ' rolling' : '')} on:click={rollDie}><span>🎲</span></span>
 	by
-	<a href="https://github.com/gusruben" class="text-primary underline">gus</a>
+	<a href="https://github.com/gusruben" class="text-primary-500 underline">gus</a>
 </p>
 
 <style>
