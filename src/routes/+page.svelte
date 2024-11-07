@@ -38,18 +38,18 @@
 	class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2
             flex-col items-center gap-3 text-background-300"
 >
-	<p class="mx-0 mb-7 whitespace-nowrap text-9xl">
+	<p class="mx-0 mb-7 whitespace-nowrap lg:text-9xl md:text-8xl sm:text-7xl text-4xl">
 		<span class="text-primary-500">random</span>.is-a.dev
 	</p>
 	<button
 		on:click={randomSite}
-		class="bg-primary-500 px-4 py-3 font-mono text-3xl text-white hover:bg-primary-600"
+		class="bg-primary-500 px-4 py-3 font-mono text-white hover:bg-primary-600 md:text-3xl text-2xl"
 		>Explore a random developer's site</button
 	>
 	<a href="/go" class="font-mono text-background-300 hover:underline">Click here for a permalink</a>
 </div>
 
-<p class="absolute bottom-2 left-1/2 -translate-x-1/2 font-mono text-lg text-background-300">
+<p class="absolute bottom-2 left-1/2 -translate-x-1/2 font-mono text-lg text-background-300 w-max">
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	Made with
