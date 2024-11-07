@@ -17,6 +17,10 @@
 	}
 </script>
 
+<svelte:head>
+	<link rel="icon" type="image/x-icon" href={`/dice${Math.ceil(Math.random() * 6)}.png`}>
+</svelte:head>
+
 <div
 	class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2
             flex-col items-center gap-3 text-background-300"
