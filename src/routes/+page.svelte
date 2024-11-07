@@ -1,4 +1,5 @@
 <script lang="ts">
+	import MetaTags from './../../node_modules/svelte-meta-tags/dist/MetaTags.svelte';
 	import { goto } from '$app/navigation';
 	import '@fontsource/pixelify-sans';
 	import '@fontsource/space-mono';
@@ -16,6 +17,18 @@
 		goto(await res.text());
 	}
 </script>
+
+<MetaTags
+	title="random.is-a.dev"
+	description="Discover random developers' personal sites"
+	openGraph={{
+		url: "https://random.is-a.dev/",
+		title: "random.is-a.dev",
+		description: "Discover random developers' personal sites",
+		images: [{ url: "/preview.png" }],
+		siteName: "random.is-a.dev"
+	}}
+/>
 
 <svelte:head>
 	<link rel="icon" type="image/x-icon" href={`/dice${Math.ceil(Math.random() * 6)}.png`}>
