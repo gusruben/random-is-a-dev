@@ -17,7 +17,7 @@ export let domainList: domain[] = [];
 
 export async function refetchList() {
 	if (!domainList.length) {
-		domainList = await read("domains.json").json();
+		domainList = await read("../domains.json").json();
 	}
 
 	const current = Date.now();
