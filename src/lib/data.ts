@@ -1,5 +1,3 @@
-import { read } from "$app/server";
-
 let lastFetch = -1;
 const MIN_FETCH_INTERVAL = 1000 * 60 * 60 * 24; // 1 day
 
@@ -17,7 +15,7 @@ export let domainList: domain[] = [];
 
 export async function refetchList() {
 	if (!domainList.length) {
-		domainList = await read("../domains.json").json();
+		domainList = (await import("../../domains.json")).default;
 	}
 
 	const current = Date.now();
