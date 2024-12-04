@@ -25,7 +25,13 @@ export async function refetchList() {
 
 	lastFetch = current;
 
-	const res = await fetch('https://raw-api.is-a.dev/');
+	let res;
+	try {
+		res = await fetch('https://raw-api.is-a.dev/');
+	} catch (e) {
+		console.error("Error fetching domain list:", e);
+		return;
+	}
 	if ((await res.text()).startsWith("<")) {
 		console.error("Rate-limited by raw-api.is-a.dev!");
 		return;
